@@ -1,0 +1,507 @@
+ 
+**************Scanning Started**************
+2016/05/25 20:23:26
+********************************************
+
+
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/DnsPinger.java
+MSC02-J. Generate strong random numbers. Error at line  '63 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/NetworkStatsHistory.java
+MSC02-J. Generate strong random numbers. Error at line  '530 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/LinkAddress.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 216
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/LinkAddress.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 242
+**************Scanning Started**************
+2016/05/25 20:28:19
+********************************************
+
+
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/DnsPinger.java
+MSC02-J. Generate strong random numbers. Error at line  '63 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/NetworkStatsHistory.java
+MSC02-J. Generate strong random numbers. Error at line  '530 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/LinkAddress.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 216
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/LinkAddress.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 242
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/Network.java
+MSC00-J. Use SSLSocket rather than Socket for secure data exchange. Error at line  '179' Programs must use the javax.net.ssl.SSLSocket class rather than the java.net.Socket class when transferring sensitive data over insecure communication channels
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/app/ApplicationPackageManager.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 1231
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/content/ContentResolver.java
+MSC02-J. Generate strong random numbers. Error at line  '286 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/camera2/legacy/LegacyMetadataMapper.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 689
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/camera2/utils/CloseableLock.java
+SER05-J. Do not serialize instances of inner classes. Error at line  '70' Outer class name 'CloseableLock' Inner class name 'ScopedLock' Instances name[AutoCloseable]
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  169 and variable ' HDMI_DEVICE_TYPE_CEC ' initialization at line 86. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  170 and variable ' physicalAddress ' initialization at line 124. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  171 and variable ' portId ' initialization at line 125. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  173 and variable ' logicalAddress ' initialization at line 129. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  174 and variable ' logicalAddress ' initialization at line 129. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  175 and variable ' deviceType ' initialization at line 130. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  176 and variable ' vendorId ' initialization at line 131. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  177 and variable ' powerStatus ' initialization at line 132. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  178 and variable ' displayName ' initialization at line 133. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  209 and variable ' HDMI_DEVICE_TYPE_HARDWARE ' initialization at line 88. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  210 and variable ' physicalAddress ' initialization at line 124. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  211 and variable ' portId ' initialization at line 125. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  213 and variable ' portId ' initialization at line 125. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  218 and variable ' portId ' initialization at line 125. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  234 and variable ' HDMI_DEVICE_TYPE_MHL ' initialization at line 87. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  235 and variable ' physicalAddress ' initialization at line 124. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  236 and variable ' portId ' initialization at line 125. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  238 and variable ' portId ' initialization at line 125. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  245 and variable ' adopterId ' initialization at line 138. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  246 and variable ' deviceId ' initialization at line 137. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  256 and variable ' HDMI_DEVICE_TYPE_INACTIVE ' initialization at line 91. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/nfc/NfcActivityManager.java
+DCL02-J. Do not modify the collection's elements during an enhanced for statement. Error at line 383
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/WorkSource.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 167
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/WorkSource.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 402
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/service/notification/ZenModeConfig.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 1015
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/service/notification/ZenModeConfig.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 1035
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/speech/tts/TextToSpeech.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 1712
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/util/ArrayMap.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 62, invoked at line  261 and variable ' EMPTY_IMMUTABLE_INTS ' initialization at line 81. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/util/MathUtils.java
+MSC02-J. Generate strong random numbers. Error at line  '27 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/view/accessibility/CaptioningManager.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 290, invoked at line  363 and variable ' EDGE_TYPE_UNSPECIFIED ' initialization at line 300. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/view/accessibility/CaptioningManager.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 290, invoked at line  371 and variable ' EDGE_TYPE_NONE ' initialization at line 303. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/view/animation/GridLayoutAnimationController.java
+MSC02-J. Generate strong random numbers. Error at line  '352 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/view/animation/GridLayoutAnimationController.java
+MSC02-J. Generate strong random numbers. Error at line  '378 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/view/animation/LayoutAnimationController.java
+MSC02-J. Generate strong random numbers. Error at line  '409 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/view/MotionEvent.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 2913
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/widget/TextView.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 6366
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/com/android/internal/app/ChooserActivity.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 280
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/com/android/internal/os/BatteryStatsImpl.java
+SER05-J. Do not serialize instances of inner classes. Error at line  '6340' Outer class name 'Pkg' Inner class name 'Serv' Instances name[TimeBaseObs]
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/com/android/internal/widget/VerifyCredentialResponse.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 33, invoked at line  73 and variable ' payload ' initialization at line 51. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/com/android/internal/widget/VerifyCredentialResponse.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 33, invoked at line  84 and variable ' responseCode ' initialization at line 44. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/com/android/internal/widget/VerifyCredentialResponse.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 33, invoked at line  84 and variable ' response ' initialization at line 45. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/com/android/internal/widget/VerifyCredentialResponse.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 33, invoked at line  86 and variable ' payload ' initialization at line 51. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabaseCursorTest.java
+MSC02-J. Generate strong random numbers. Error at line  '241 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabaseCursorTest.java
+MSC02-J. Generate strong random numbers. Error at line  '322 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabaseCursorTest.java
+MSC02-J. Generate strong random numbers. Error at line  '355 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '205 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '238 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '273 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '313 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '351 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '390 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '428 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '468 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '510 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '562 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '601 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '635 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '667 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '700 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '734 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '774 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '807 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '839 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '876 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '915 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '959 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1000 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1032 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1065 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1097 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1132 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1170 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1209 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1243 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1281 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/DatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1318 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '114 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '146 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '180 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '219 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '256 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '294 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '331 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '370 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '411 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '462 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '498 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '529 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '560 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '592 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '625 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '663 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '694 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '725 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '761 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '799 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '842 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '882 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '913 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '945 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '976 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1010 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1048 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1086 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1119 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1156 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/database/NewDatabasePerformanceTests.java
+MSC02-J. Generate strong random numbers. Error at line  '1193 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/net/IpPrefixTest.java
+MSC02-J. Generate strong random numbers. Error at line  '247 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/net/NetworkStatsHistoryTest.java
+MSC02-J. Generate strong random numbers. Error at line  '312 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/os/FileBridgeTest.java
+MSC02-J. Generate strong random numbers. Error at line  '132 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/os/FileBridgeTest.java
+MSC02-J. Generate strong random numbers. Error at line  '149 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/os/PerformanceCollectorTest.java
+MSC02-J. Generate strong random numbers. Error at line  '375 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/util/Base64Test.java
+MSC02-J. Generate strong random numbers. Error at line  '315 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/util/Base64Test.java
+MSC02-J. Generate strong random numbers. Error at line  '430 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/util/LongSparseLongArrayTest.java
+MSC02-J. Generate strong random numbers. Error at line  '75 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/widget/gridview/GridThrasher.java
+MSC02-J. Generate strong random numbers. Error at line  '42 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/widget/listview/ListThrasher.java
+MSC02-J. Generate strong random numbers. Error at line  '40 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/android/widget/SimpleCursorAdapterTest.java
+MSC02-J. Generate strong random numbers. Error at line  '70 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/com/android/internal/util/BitwiseStreamsTest.java
+MSC02-J. Generate strong random numbers. Error at line  '95 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/com/android/internal/util/BitwiseStreamsTest.java
+MSC02-J. Generate strong random numbers. Error at line  '139 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/coretests/src/com/android/internal/util/FileRotatorTest.java
+MSC02-J. Generate strong random numbers. Error at line  '340 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/tests/notificationtests/src/android/app/NotificationStressTest.java
+MSC02-J. Generate strong random numbers. Error at line  '51 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/graphics/java/android/graphics/pdf/PdfRenderer.java
+SER05-J. Do not serialize instances of inner classes. Error at line  '251' Outer class name 'PdfRenderer' Inner class name 'Page' Instances name[AutoCloseable]
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/location/tests/locationtests/src/android/location/GpsStatusTest.java
+MSC02-J. Generate strong random numbers. Error at line  '38 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/media/java/android/media/midi/MidiDevice.java
+SER05-J. Do not serialize instances of inner classes. Error at line  '47' Outer class name 'MidiDevice' Inner class name 'MidiConnection' Instances name[Closeable]
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/media/mca/filterfw/java/android/filterfw/core/RandomScheduler.java
+MSC02-J. Generate strong random numbers. Error at line  '31 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/media/mca/filterpacks/java/android/filterpacks/imageproc/BlackWhiteFilter.java
+MSC02-J. Generate strong random numbers. Error at line  '87 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/media/mca/filterpacks/java/android/filterpacks/imageproc/LomoishFilter.java
+MSC02-J. Generate strong random numbers. Error at line  '122 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/media/mca/filterpacks/java/android/filterpacks/imageproc/DocumentaryFilter.java
+MSC02-J. Generate strong random numbers. Error at line  '82 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/media/mca/filterpacks/java/android/filterpacks/imageproc/GrainFilter.java
+MSC02-J. Generate strong random numbers. Error at line  '93 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/media/tests/MediaFrameworkTest/src/com/android/mediaframeworktest/functional/audio/MediaAudioEffectTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 109
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/media/tests/MediaFrameworkTest/src/com/android/mediaframeworktest/functional/audio/MediaAudioEffectTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 111
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/media/tests/MediaFrameworkTest/src/com/android/mediaframeworktest/functional/audio/MediaAudioEffectTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 113
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/media/tests/MediaFrameworkTest/src/com/android/mediaframeworktest/functional/audio/MediaAudioEffectTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 116
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/media/tests/MediaFrameworkTest/src/com/android/mediaframeworktest/functional/audio/MediaAudioEffectTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 159
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/media/tests/MediaFrameworkTest/src/com/android/mediaframeworktest/functional/audio/MediaAudioEffectTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 202
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/media/tests/MediaFrameworkTest/src/com/android/mediaframeworktest/functional/MediaPlayerInvokeTest.java
+MSC02-J. Generate strong random numbers. Error at line  '42 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/CaptivePortalLogin/src/com/android/captiveportallogin/CaptivePortalLoginActivity.java
+MSC02-J. Generate strong random numbers. Error at line  '254 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/DocumentsUI/src/com/android/documentsui/DirectoryFragment.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 1177
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/DocumentsUI/src/com/android/documentsui/DirectoryFragment.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 1181
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/FakeOemFeatures/src/com/android/fakeoemfeatures/FakeBackgroundService.java
+MSC02-J. Generate strong random numbers. Error at line  '36 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/FakeOemFeatures/src/com/android/fakeoemfeatures/FakeView.java
+MSC02-J. Generate strong random numbers. Error at line  '50 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/services/Proxy/src/com/android/proxyhandler/ProxyServer.java
+MSC00-J. Use SSLSocket rather than Socket for secure data exchange. Error at line  '129' Programs must use the javax.net.ssl.SSLSocket class rather than the java.net.Socket class when transferring sensitive data over insecure communication channels
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/services/Proxy/src/com/android/proxyhandler/ProxyServer.java
+MSC00-J. Use SSLSocket rather than Socket for secure data exchange. Error at line  '133' Programs must use the javax.net.ssl.SSLSocket class rather than the java.net.Socket class when transferring sensitive data over insecure communication channels
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/services/Proxy/src/com/android/proxyhandler/ProxyServer.java
+MSC00-J. Use SSLSocket rather than Socket for secure data exchange. Error at line  '154' Programs must use the javax.net.ssl.SSLSocket class rather than the java.net.Socket class when transferring sensitive data over insecure communication channels
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/services/Proxy/src/com/android/proxyhandler/ProxyServer.java
+MSC00-J. Use SSLSocket rather than Socket for secure data exchange. Error at line  '331' Programs must use the javax.net.ssl.SSLSocket class rather than the java.net.Socket class when transferring sensitive data over insecure communication channels
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/SettingsLib/src/com/android/settingslib/bluetooth/CachedBluetoothDevice.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 632
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/SettingsProvider/src/com/android/providers/settings/DatabaseHelper.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 2448
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/SettingsProvider/src/com/android/providers/settings/DatabaseHelper.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 2580
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/SettingsProvider/src/com/android/providers/settings/DatabaseHelper.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 2609
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/SettingsProvider/src/com/android/providers/settings/DatabaseHelper.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 2632
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/SystemUI/src/com/android/systemui/recents/model/TaskStack.java
+MSC02-J. Generate strong random numbers. Error at line  '405 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/SystemUI/src/com/android/systemui/statusbar/phone/QSTileHost.java
+DCL02-J. Do not modify the collection's elements during an enhanced for statement. Error at line 272
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WallpaperCropper/src/com/android/gallery3d/exif/ExifTag.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 992
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '1328 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '1353 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '1377 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '1401 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '1425 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '1458 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '1861 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '1890 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '1910 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '1957 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '1982 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '2014 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '2046 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '2226 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '2290 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '2348 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '2414 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/packages/WAPPushManager/tests/src/com/android/smspush/unitTests/WapPushTest.java
+MSC02-J. Generate strong random numbers. Error at line  '2473 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/appwidget/java/com/android/server/appwidget/AppWidgetServiceImpl.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 2404
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/appwidget/java/com/android/server/appwidget/AppWidgetServiceImpl.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 2939
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/appwidget/java/com/android/server/appwidget/AppWidgetServiceImpl.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 3298
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/appwidget/java/com/android/server/appwidget/AppWidgetServiceImpl.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 3305
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/appwidget/java/com/android/server/appwidget/AppWidgetServiceImpl.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 3312
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/appwidget/java/com/android/server/appwidget/AppWidgetServiceImpl.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 3352
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/appwidget/java/com/android/server/appwidget/AppWidgetServiceImpl.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 3428
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/appwidget/java/com/android/server/appwidget/AppWidgetServiceImpl.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 3436
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/appwidget/java/com/android/server/appwidget/AppWidgetServiceImpl.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 3482
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/backup/java/com/android/server/backup/BackupManagerService.java
+MSC02-J. Generate strong random numbers. Error at line  '547 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/backup/java/com/android/server/backup/BackupManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 3936
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/backup/java/com/android/server/backup/BackupManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 4387
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/backup/java/com/android/server/backup/BackupManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 4756
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/backup/java/com/android/server/backup/BackupManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 5287
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/backup/java/com/android/server/backup/BackupManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 5360
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/backup/java/com/android/server/backup/BackupManagerService.java
+SER05-J. Do not serialize instances of inner classes. Error at line  '5869' Outer class name 'PerformAdbRestoreTask' Inner class name 'RestoreFileRunnable' Instances name[Runnable]
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/backup/java/com/android/server/backup/BackupManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 6541
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/backup/java/com/android/server/backup/BackupManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 6632
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/backup/java/com/android/server/backup/BackupManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 6701
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/backup/java/com/android/server/backup/BackupManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 7360
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/backup/java/com/android/server/backup/BackupManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 7364
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/backup/java/com/android/server/backup/KeyValueBackupJob.java
+MSC02-J. Generate strong random numbers. Error at line  '64 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/accounts/AccountManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 860
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/accounts/AccountManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 4092
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/AlarmManagerService.java
+MSC02-J. Generate strong random numbers. Error at line  '983 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 14022
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 14757
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/pm/Settings.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 2319
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/pm/Settings.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 2358
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 3949
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 4293
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 4407
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 6597
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 6598
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 13415
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 15866
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/policy/PolicyControl.java
+DCL02-J. Do not modify the collection's elements during an enhanced for statement. Error at line 246
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/policy/PolicyControl.java
+DCL02-J. Do not modify the collection's elements during an enhanced for statement. Error at line 246
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/location/GpsXtraDownloader.java
+MSC02-J. Generate strong random numbers. Error at line  '75 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/location/LocationBlacklist.java
+DCL02-J. Do not modify the collection's elements during an enhanced for statement. Error at line 137
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/wm/ViewServer.java
+MSC00-J. Use SSLSocket rather than Socket for secure data exchange. Error at line  '104' Programs must use the javax.net.ssl.SSLSocket class rather than the java.net.Socket class when transferring sensitive data over insecure communication channels
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/connectivity/NetworkDiagnostics.java
+MSC02-J. Generate strong random numbers. Error at line  '470 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/connectivity/NetworkMonitor.java
+MSC02-J. Generate strong random numbers. Error at line  '540 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/connectivity/NetworkMonitor.java
+MSC02-J. Generate strong random numbers. Error at line  '573 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/content/SyncManager.java
+MSC02-J. Generate strong random numbers. Error at line  '583 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/content/SyncStorageEngine.java
+MSC02-J. Generate strong random numbers. Error at line  '1881 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/fingerprint/FingerprintService.java
+SER05-J. Do not serialize instances of inner classes. Error at line  '605' Outer class name 'FingerprintService' Inner class name 'ClientMonitor' Instances name[IBinder.DeathRecipient]
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/core/java/com/android/server/notification/NotificationManagerService.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 2081
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/net/java/android/net/dhcp/DhcpClient.java
+MSC02-J. Generate strong random numbers. Error at line  '206 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/tests/servicestests/src/com/android/server/ConnectivityServiceTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 681
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/tests/servicestests/src/com/android/server/ConnectivityServiceTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 683
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/tests/servicestests/src/com/android/server/ConnectivityServiceTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 691
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/tests/servicestests/src/com/android/server/ConnectivityServiceTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 693
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/tests/servicestests/src/com/android/server/DropBoxTest.java
+MSC02-J. Generate strong random numbers. Error at line  '740 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/tests/servicestests/src/com/android/server/pm/KeySetManagerServiceTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 82
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/tests/servicestests/src/com/android/server/pm/KeySetManagerServiceTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 82
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/tests/servicestests/src/com/android/server/pm/KeySetManagerServiceTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 87
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/tests/servicestests/src/com/android/server/pm/KeySetManagerServiceTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 87
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/tests/servicestests/src/com/android/server/pm/KeySetManagerServiceTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 92
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/tests/servicestests/src/com/android/server/pm/KeySetManagerServiceTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 92
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/services/tests/servicestests/src/com/android/server/pm/KeySetManagerServiceTest.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 391
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/test-runner/src/android/test/ServiceTestCase.java
+MSC02-J. Generate strong random numbers. Error at line  '171 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/tests/BandwidthTests/src/com/android/tests/bandwidthenforcement/BandwidthEnforcementTestService.java
+MSC02-J. Generate strong random numbers. Error at line  '185 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.

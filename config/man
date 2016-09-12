@@ -1,0 +1,18 @@
+Usage: 
+
+For scanning: java -jar rat.jar [Option] [Filename]
+Option:
+
+General Options:
+
+	b		For Batch Scanning 
+			After b a Directory name is mandatory
+                        
+			Usage: java -jar rat.jar b Directory name
+
+	s		For Single file Scanning
+			After s a file name ending with .java is mandatory
+
+			Usage: java -jar rat.jar s filename
+	
+ 	h		Help You will get the manpage.		

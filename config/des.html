@@ -1,0 +1,994 @@
+ 
+
+
+
+
+ 
+
+<OBJ09-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>OBJ09-J. Compare classes and not class names</h4>
+     <p>There is no requirement that class names be unique, only that they are unique within a package. Therefore trying to determine an object's type based on its class name is an exercise fraught with danger. One of those dangers is that a malicious user will send objects of the same name as the trusted class and thereby gain trusted access.   
+        </p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> code block <span style="color: red"><!--$001violation$001--> </span> trying to compare classes and not class names</p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p>This non-compliant code example compares the name of the class of object auth to the string "com.application.auth.DefaultAuthenticationHandler"</p>
+ <pre><code class="language-java">public class Demo {
+   
+  public Demo() {
+	  //some code
+  }
+ 
+  public static void main(String[] args) {
+	  Demo d=new Demo();
+	  if (d.getClass().getName().equals(
+		      "com.application.auth.DefaultAuthenticationHandler")) {
+		   // ...
+		}
+  }
+}</code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p>This compliant solution compares the class object auth to the class object for the canonical default authentication handler</p>
+ <pre><code class="language-java">public class Demo {
+   
+  public Demo() {
+	  //some code
+  }
+ 
+  public static void main(String[] args) {
+	  Demo d=new Demo();
+	  if (d.getClass() == com.application.auth.DefaultAuthenticationHandler.class)
+	   {
+		   // ...
+		}
+  }
+}</code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/OBJ09-J.+Compare+classes+and+not+class+names" target="_blank"> OBJ09-J. Compare classes and not class names</a></li>
+          </ul> 
+          <h4>Related Guidelines</h4>
+          <ul>
+            <li><a href="http://cwe.mitre.org/data/definitions/486.html" target="_blank"> CWE-486, </a>Comparison of Classes by Name</li>
+          </ul></td>  </tr>
+</OBJ09-J>
+
+
+
+
+
+
+
+
+
+ 
+
+<LCK02-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>LCK02-J. Do not synchronize on the class object returned by getClass()</h4>
+     <p>Synchronizing on the return value of the Object.getClass() method can lead to unexpected behavior. Whenever the implementing class is subclassed, the subclass locks on the subclass's type. The Class object of the subclass is entirely distinct from the Class object of the parent class.</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> code block <span style="color: red"><!--$001violation$001--> </span> trying to synchronize on the class object returned by getClass()</p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p> This noncompliant code example synchronizes on the class object returned by getClass() in the parse() method of class Base. The Base class also has a nested Helper class whose doSomethingAndParse() method incorrectly synchronizes on the value returned by getClass(). </p>
+ <pre><code class="language-java"> 
+class Base {
+  static DateFormat format =
+      DateFormat.getDateInstance(DateFormat.MEDIUM);
+ 
+  public Date parse(String str) throws ParseException {
+    synchronized (getClass()) { // Intend to synchronizes on Base.class
+      return format.parse(str);
+    }
+  }
+ 
+  public Date doSomething(String str) throws ParseException {
+    return new Helper().doSomethingAndParse(str);
+  }
+ 
+  private class Helper {
+    public Date doSomethingAndParse(String str) throws ParseException {
+      synchronized (getClass()) { // Synchronizes on Helper.class
+        // ...
+        return format.parse(str);
+      }
+    }
+  }
+}
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p>This compliant solution synchronizes using a Base class literal in the parse() and doSomethingAndParse() methods</p>
+ <pre><code class="language-java">
+ class Base {
+  // ...
+ 
+  public Date parse(String str) throws ParseException {
+    synchronized (Base.class) {
+      return format.parse(str);
+    }
+  }
+ 
+  private class Helper {
+    public Date doSomethingAndParse(String str) throws ParseException {
+      synchronized (Base.class) { // Synchronizes on Base class literal
+        // ...
+        return format.parse(str);
+      }
+    }
+  }
+}
+ </code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=43647087" target="_blank">LCK02-J. Do not synchronize on the class object returned by getClass()</a></li>
+          </ul> 
+           </td>  </tr>
+</LCK02-J>
+ 
+
+<FIO02-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>FIO02-J. Detect and handle file-related errors</h4>
+     <p>Java's file-manipulation methods often indicate failure with a return value instead of throwing an exception. Consequently, programs that ignore the return values from file operations often fail to detect that those operations have failed. Java programs must check the return values of methods that perform file I/O.</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> code block <span style="color: red"><!--$001violation$001--> </span> trying to delete file without detect and handle file-related errors </p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p> This noncompliant code example attempts to delete a specified file but gives no indication of its success.  </p>
+ <pre><code class="language-java"> 
+ class FileDelete {
+	public static void main(String args[]){
+		File file = new File("file");
+	file.delete();
+}
+	}
+	
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p>  This compliant solution checks the return value of delete()</p>
+ <pre><code class="language-java"> class FileDelete {
+	public static void main(String args[]){
+		File file = new File("file");
+if (!file.delete()) {
+  System.out.println("Deletion failed");
+}
+	}</code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/FIO02-J.+Detect+and+handle+file-related+errors" target="_blank"> FIO02-J. Detect and handle file-related errors</a></li>
+          </ul> 
+          <h4>Related Guidelines</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/cplusplus/FIO04-CPP.+Detect+and+handle+input+and+output+errors" target="_blank"> FIO04-CPP. Detect and handle input and output errors</a></li>
+          </ul></td>  </tr>
+</FIO02-J>
+ 
+
+<ERR04-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>ERR04-J. Do not complete abruptly from a finally block</h4>
+     <p>Never use return, break, continue, or throw statements within a finally block. When program execution enters a try block that has a finally block, the finally block always executes regardless of whether the try block (or any associated catch blocks) executes to normal completion. Statements that cause the finally block to complete abruptly also cause the try block to complete abruptly and consequently suppress any exception thrown from the try or catch blocks.</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> An abruptly statement <span style="color: red"><!--$001violation$001--> </span> is present in finally block </p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p> In this noncompliant code example, the finally block completes abruptly because of a return statement in the block </p>
+ <pre><code class="language-java"> 
+ class TryNC {
+  private static boolean doSomeThing() {
+    try {
+      throw new IllegalStateException();
+    } finally {
+      System.out.println("Done");
+      return true;
+    }
+  }
+}
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p> This compliant solution removes the return statement from the finally block</p>
+ <pre><code class="language-java"> 
+ class TryNC {
+  private static boolean doSomeThing() {
+    try {
+      throw new IllegalStateException();
+    } finally {
+      System.out.println("logic done");
+     
+    }
+    //Add return statement here
+  }
+}
+</code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/ERR04-J.+Do+not+complete+abruptly+from+a+finally+block" target="_blank">ERR04-J. Do not complete abruptly from a finally block</a></li>
+          </ul> 
+          <h4>Related Guidelines</h4>
+          <ul>
+            <li><a href="http://cwe.mitre.org/data/definitions/459.html" target="_blank"> CWE-459, </a>Incomplete Cleanup</li>
+ 				<li><a href="http://cwe.mitre.org/data/definitions/584.html" target="_blank"> CWE-584, </a>Return Inside finally Block</li>
+         
+      
+          </ul></td>  </tr>
+</ERR04-J>
+ 
+
+<ERR05-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>ERR05-J. Do not let checked exceptions escape from a finally block</h4>
+     <p>Methods invoked from within a finally block can throw an exception. Failure to catch and handle such exceptions results in the abrupt termination of the entire try block. Abrupt termination causes any exception thrown in the try block to be lost, preventing any possible recovery method from handling that specific problem. </p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> A method invocation <span style="color: red"><!--$001violation$001--> </span> is present inside a finally block without a try-catch block </p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p> This noncompliant code example contains a finally block that closes the reader object. The programmer incorrectly assumes that the statements in the finally block cannot throw exceptions and consequently fails to appropriately handle any exception that may arise. </p>
+ <pre><code class="language-java"> 
+ try {
+      BufferedReader reader =
+          new BufferedReader(new FileReader(some_file));
+      try {
+        // Do operations
+      } finally {
+        reader.close();
+        // ... Other cleanup code ...
+      }
+    } catch (IOException x) {
+      // Forward to handler
+    }
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p>  This compliant solution encloses the close() method invocation in a try-catch block of its own within the finally block. Consequently, the potential IOException can be handled without allowing it to propagate further.t</p>
+ <pre><code class="language-java"> 
+  try {
+      BufferedReader reader =
+          new BufferedReader(new FileReader(some_file));
+      try {
+        // Do operations
+      } finally {
+        try {
+          reader.close();
+        } catch (IOException ie) {
+          // Forward to handler
+        }
+        // ... Other cleanup code ...
+      }
+    } catch (IOException x) {
+      // Forward to handler
+    }
+    </code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/ERR05-J.+Do+not+let+checked+exceptions+escape+from+a+finally+block" target="_blank"> ERR05-J. Do not let checked exceptions escape from a finally block</a></li>
+          </ul> 
+          <h4>Related Guidelines</h4>
+          <ul>
+            <li><a href="http://cwe.mitre.org/data/definitions/703.html" target="_blank"> CWE-703,</a> Improper Check or Handling of Exceptional Conditions</li>
+          <li><a href="http://cwe.mitre.org/data/definitions/248.html" target="_blank"> CWE-248,</a> Uncaught Exception</li>
+          
+          </ul></td>  </tr>
+</ERR05-J>
+  
+
+<ERR07-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>ERR07-J. Do not throw RuntimeException, Exception, or Throwable</h4>
+     <p>Methods must not throw RuntimeException, Exception, or Throwable. Throwing a RuntimeException can lead to subtle errors; for example, a caller cannot examine the exception to determine why it was thrown and consequently cannot attempt recovery.
+     <p>Methods must not throw RuntimeException, Exception, or Throwable. Throwing a RuntimeException can lead to subtle errors; for example, a caller cannot examine the exception to determine why it was thrown and consequently cannot attempt recovery.
+</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> throws <span style="color: red"><!--$001violation$001--> </span> </p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p> The isCapitalized() method in this noncompliant code example accepts a string and returns true when the string consists of a capital letter followed by lowercase letters. The method also throws a RuntimeException when passed a null string argument. </p>
+ <pre><code class="language-java"> 
+boolean isCapitalized(String s) {
+  if (s == null) {
+    throw new RuntimeException("Null String");
+  }
+  if (s.equals("")) {
+    return true;
+  }
+  String first = s.substring(0, 1);
+  String rest = s.substring(1);
+  return (first.equals(first.toUpperCase()) &&
+          rest.equals(rest.toLowerCase()));
+}
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p> This compliant solution throws NullPointerException to denote the specific exceptional condition</p>
+ <pre><code class="language-java">
+  boolean isCapitalized(String s) {
+  if (s == null) {
+    throw new NullPointerException();
+  }
+  if (s.equals("")) {
+    return true;
+  }
+  String first = s.substring(0, 1);
+  String rest = s.substring(1);
+  return (first.equals(first.toUpperCase()) &&
+          rest.equals(rest.toLowerCase()));
+}</code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/ERR07-J.+Do+not+throw+RuntimeException%2C+Exception%2C+or+Throwable" target="_blank">ERR07-J. Do not throw RuntimeException, Exception, or Throwable</a></li>
+          </ul> 
+          <h4>Related Guidelines</h4>
+          <ul>
+            <li><a href="http://cwe.mitre.org/data/definitions/397.html" target="_blank">CWE-397</a>, Declaration of Throws for Generic Exception</li>
+          </ul></td>  </tr>
+</ERR07-J>
+
+
+
+ 
+
+<ERR08-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>ERR08-J. Do not catch NullPointerException or any of its ancestors</h4>
+     <p>NullPointerException should be avoided, not caught. Any situation in which NullPointerException is explicitly caught can easily be converted to a null test, and any behavior being carried out in the catch block can easily be moved to the "is null" branch of the conditional.</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> catch block contains a null pointer exception <span style="color: red"><!--$001violation$001--> </span>  </p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p>In the Non-compliant Solution rather than checking to see whether the given string is null, the method catches NullPointerException and returns false. </p>
+ <pre><code class="language-java"> 
+public int lengthPlus(String str) {
+  int len = 2;
+  try {
+    len += str.length();
+  }
+  catch (NullPointerException e) {
+    log.info("argument was null");
+  }
+  return len;
+}
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p>  This compliant solution explicitly checks the String argument for null rather than catching NullPointerException:</p>
+ <pre><code class="language-java"> 
+ public int lengthPlus(String str) {
+  int len = 2;
+
+  if (str != null) {
+    len += str.length();
+  }
+  else {
+    log.info("argument was null");
+  }
+  return len;
+}
+</code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/ERR08-J.+Do+not+catch+NullPointerException+or+any+of+its+ancestors" target="_blank"> ERR08-J. Do not catch NullPointerException or any of its ancestors</a></li>
+          </ul> 
+          </td>  </tr>
+</ERR08-J>
+ 
+ 
+
+<ERR02-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>ERR02-J. Prevent exceptions while logging data</h4>
+     <p>When logging a message there are several important requirements which must be fulfilled:
+<ul>
+            <li>The user must be able to easily retrieve the logs</li>
+            <li>The format of all logged message must be uniform to allow the user to easily read the log</li>
+            <li>Logged data must actually be recorded</li>
+            <li>Sensitive data must only be logged securely            </li></ul>
+If a program directly writes to the standard outputs, there is absolutely no way to comply with those requirements. That's why defining and using a dedicated logger is highly recommended.</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> code block <span style="color: red"><!--$001violation$001--> </span> trying to </p> 
+       <span style="color: #660000">  <h4>Non-compliant Solution</h4></span> 
+<p> his noncompliant code example writes a critical security exception to the standard error stream.Writing such exceptions to the standard error stream is inadequate for logging purposes. First, the standard error stream may be exhausted or closed, preventing recording of subsequent exceptions. Second, the trust level of the standard error stream may be insufficient for recording certain security-critical exceptions or errors without leaking sensitive information. If an I/O error were to occur while writing the security exception, the catch block would throw an IOException and the critical security exception would be lost. Finally, an attacker may disguise the exception so that it occurs with several other innocuous exceptions.
+Using Console.printf(), System.out.print*(), or Throwable.printStackTrace() to output a security exception also constitutes a violation of this rule.</p>
+ <pre><code class="language-java"> 
+try {
+  // ...
+} catch (SecurityException se) {
+  System.err.println(se);
+  // Recover from exception
+}
+ </code></pre>
+<span style="color: #00b33c"><h4>Compliant Solution</h4></span>
+<p> This compliant solution uses java.util.logging.Logger, the default logging API provided by JDK 1.4 and later. Use of other compliant logging mechanisms, such as log4j, is also permitted.</p>
+ <pre><code class="language-java"> try {
+  // ...
+} catch(SecurityException se) {
+  logger.log(Level.SEVERE, se);
+  // Recover from exception
+}</code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/OBJ09-J.+Compare+classes+and+not+class+names" target="_blank">ERR02-J. Prevent exceptions while logging data</a></li>
+          </ul> 
+          <h4>Related Guidelines</h4>
+          <ul>
+            <li><a href="http://issues.apache.org/jira/browse/HARMONY-5981" target="_blank"> HARMONY-5981  </a> </li>
+          </ul></td>  </tr>
+</ERR02-J>
+ 
+
+<LCK01-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>LCK01-J. Do not synchronize on objects that may be reused</h4>
+     <p>Misuse of synchronization primitives is a common source of concurrency issues. Synchronizing on objects that may be reused can result in deadlock and nondeterministic behavior. Consequently, programs must never synchronize on objects that may be reused.</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> Misuse of synchronization primitives <span style="color: red"><!--$001violation$001--> </span> is present. </p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p> This noncompliant code example locks on a boxed Integer object.</p>
+ <pre><code class="language-java"> 
+private int count = 0;
+private final Integer Lock = count; // Boxed primitive Lock is shared
+ 
+public void doSomething() {
+  synchronized (Lock) {
+    count++;
+    // ...
+  }
+}
+ </code></pre>
+<span style="color: #00b33c"><h4>Compliant Solution</h4></span>
+<p>  This compliant solution locks on a nonboxed Integer, using a variant of the private lock object idiom. The doSomething() method synchronizes using the intrinsic lock of the Integer instance, Lock.</p>
+ <pre><code class="language-java"> 
+ private int count = 0;
+private final Integer Lock = new Integer(count);
+ 
+public void doSomething() {
+  synchronized (Lock) {
+    count++;
+    // ...
+  }
+}
+</code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/OBJ09-J.+Compare+classes+and+not+class+names" target="_blank"> LCK01-J. Do not synchronize on objects that may be reused</a></li>
+          </ul> 
+          
+</LCK01-J>
+ 
+
+<DCL00-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>DCL00-J. Prevent class initialization cycles</h4>
+     <p>Initialization of a class consists of executing its static initializers and the initializers for static fields (class variables) declared in the class. Therefore, the presence of a static field triggers the initialization of a class. However, the initializer of a static field could depend on the initialization of another class, possibly creating an initialization cycle.\cite{CERT}. There are two types of class initialization cycle problem, Intraclass and interclass. In intraclass the vulnerability  happened because the constructor invocation is done before completing the initialization of the variables. The solution is, do the object creation after the complete variable initialization.</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> have DCL00-J because <span style="color: red"><!--$001violation$001--> </span> trying to </p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p> In the non-compliant code, there is a static final variable initialization after class object creation. </p>
+ <pre><code class="language-java"> 
+public class RollNo {
+private final int idNumber;
+private static final RollNo r= new RollNo();
+private static final int seed = (int) (Math.random() * 100);
+public RollNo() {
+idNumber = seed - 10;
+}
+public static void main(String[] args) {
+System.out.println("Your unique id is: " + r.idNumber);
+}
+}
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p>  In the compliant code, the static final variable initialization done before class object creation.</p>
+ <pre><code class="language-java"> 
+public class RollNo {
+private final int idNumber;
+private static final int seed = (int) (Math.random() * 100);
+private static final RollNo r= new RollNo();
+public RollNo() {
+idNumber = seed - 10;
+}
+public static void main(String[] args) {
+System.out.println("Your unique id is: " + r.idNumber);
+}
+}
+ </code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/DCL00-J.+Prevent+class+initialization+cycles" target="_blank">DCL00-J. Prevent class initialization cycles</a></li>
+          </ul> 
+          <h4>Related Guidelines</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/pages/viewpage.action?pageId=637" target="_blank"> DCL14-CPP. Avoid assumptions about the initialization order between translation units</a></li>
+          <li><a href="http://cwe.mitre.org/data/definitions/665.html" target="_blank">CWE-665,</a> Improper Initialization</li>
+          
+          </ul></td>  </tr>
+</DCL00-J>
+ 
+
+<DCL01-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>DCL01-J. Do not reuse public identifiers from the Java Standard Library</h4>
+     <p>According to CERT DCL01-J, a program does not reuse the names of publicly visible identifiers, public utility classes, interfaces, or packages in the Java Standard Library. When a developer uses an identifier that has the same name as a public class, a java resolver might be unaware that this identifier actually refers to which class. In the case of IDE, there is a feature that does automatic inclusion of import statements. which creates further ambiguity with respect to the names.</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> code block <span style="color: red"><!--$001violation$001--> </span> trying to reuse public identifiers from the Java Standard Library </p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p> In the non-compliant code example implements a class that reuses the name of the class java.lang.String. It attempts to introduce a different condition for the isEmpty() method which is already present in java.lang.String. A maintainer may confuse the isEmpty() method with the java.lang.String.isEmpty() method. </p>
+ <pre><code class="language-java"> 
+ class String {
+private int val = 1;
+public boolean isEmpty() {
+if (val == 1) { // Compares with 1 instead of 0
+return true;
+} else {
+return false;
+}
+}
+}
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p>  This compliant solution uses a different name for the class, preventing any potential shadowing of
+the class from the Java Standard Library</p>
+ <pre><code class="language-java"> 
+class MyString {
+private int val = 1;
+public boolean isEmpty() {
+if (val == 1) { // Compares with 1 instead of 0
+return true;
+} else {
+return false;
+}
+}
+ </code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/DCL01-J.+Do+not+reuse+public+identifiers+from+the+Java+Standard+Library" target="_blank"> DCL01-J. Do not reuse public identifiers from the Java Standard Library</a></li>
+          </ul> 
+          <h4>Related Guidelines</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/c/PRE04-C.+Do+not+reuse+a+standard+header+file+name" target="_blank"> PRE04-C. Do not reuse a standard header file name</a> </li>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/cplusplus/PRE04-CPP.+Do+not+reuse+a+standard+header+file+name" target="_blank"> PRE04-CPP. Do not reuse a standard header file name</a> </li>
+          
+          </ul></td>  </tr>
+</DCL01-J>
+ 
+
+<DCL02-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>DCL02-J. Do not modify the collection's elements during an enhanced for statement</h4>
+     <p>Unlike the basic for statement, assignments to the loop variable fail to affect the loop's iteration order over the underlying set of objects. Consequently, an assignment to the loop variable is equivalent to modifying a variable local to the loop body whose initial value is the object referenced by the loop iterator. This modification is not necessarily erroneous but can obscure the loop functionality or indicate a misunderstanding of the underlying implementation of the enhanced for statement.
+Declare all enhanced for statement loop variables final. The final declaration causes Java compilers to flag and reject any assignments made to the loop variable.</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> code block contains <span style="color: red"><!--$001violation$001--> </span> trying to modify the collection's elements during an enhanced for statement </p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p> This noncompliant code example attempts to process a collection of integers using an enhanced for loop. It further intends to modify one item in the collection for processing: </p>
+ <pre><code class="language-java"> 
+List<Integer> list = Arrays.asList(new Integer[] {13, 14, 15});
+boolean first = true;
+ 
+System.out.println("Processing list...");
+for (Integer i: list) {
+  if (first) {
+    first = false;
+    i = new Integer(99);
+  }
+  System.out.println(" New item: " + i);
+  // Process i
+}
+ 
+System.out.println("Modified list?");
+for (Integer i: list) {
+  System.out.println("List item: " + i);
+}
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p>This compliant solution processes the "modified" list but leaves the actual list unchanged:  </p>
+ <pre><code class="language-java"> 
+// ...
+ 
+for (final Integer i: list) {
+  Integer item = i;
+  if (first) {
+    first = false;
+    item = new Integer(99);
+  }
+  System.out.println(" New item: " + item);
+  // Process item
+}
+ 
+// ...
+ </code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/DCL02-J.+Do+not+modify+the+collection%27s+elements+during+an+enhanced+for+statement" target="_blank">DCL02-J. Do not modify the collection's elements during an enhanced for statement </a></li>
+          </ul> 
+           </td>  </tr>
+</DCL02-J>
+ 
+
+<EXP02-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>EXP02-J. Do not use the Object.equals() method to compare two arrays</h4>
+     <p>n Java, arrays are objects and support object methods such as Object.equals(). However, arrays do not support any methods besides those provided by Object. Consequently, using Object.equals() on any array compares only array references, not their contents. Programmers who wish to compare the contents of two arrays must use the static two-argument Arrays.equals() method. This method considers two arrays equivalent if both arrays contain the same number of elements, and all corresponding pairs of elements in the two arrays are equivalent, according to Object.equals(). In other words, two arrays are equal if they contain equivalent elements in the same order. To test for reference equality, use the reference equality operators, == and !=.  
+Because the effect of using Object.equals() to compare two arrays is often misconstrued as content equality, and because a better alternative exists in the use of reference equality operators, the use of the Object.equals() method to compare two arrays is disallowed.</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> code block <span style="color: red"><!--$001violation$001--> </span> trying to </p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p> This noncompliant code example uses the Object.equals() method to compare two arrays: </p>
+ <pre><code class="language-java"> 
+int[] arr1 = new int[20]; // Initialized to 0
+int[] arr2 = new int[20]; // Initialized to 0
+System.out.println(arr1.equals(arr2)); // Prints false
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p> This compliant solution compares the content of two arrays using the two-argument Arrays.equals() method:</p>
+ <pre><code class="language-java"> 
+ 
+int[] arr1 = new int[20]; // Initialized to 0
+int[] arr2 = new int[20]; // Initialized to 0
+System.out.println(Arrays.equals(arr1, arr2)); // Prints true
+ </code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/EXP02-J.+Do+not+use+the+Object.equals%28%29+method+to+compare+two+arrays" target="_blank">EXP02-J. Do not use the Object.equals() method to compare two arrays </a></li>
+          </ul> 
+          <h4>Related Guidelines</h4>
+           </td>  </tr>
+</EXP02-J>
+ 
+
+<MSC00-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>MSC00-J. Use SSLSocket rather than Socket for secure data exchange</h4>
+     <p>Programs must use the javax.net.ssl.SSLSocket class rather than the java.net.Socket class when transferring sensitive data over insecure communication channels. The class SSLSocket provides security protocols such as Secure Sockets Layer/Transport Layer Security (SSL/TLS) to ensure that the channel is not vulnerable to eavesdropping and malicious tampering.</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> code block <span style="color: red"><!--$001violation$001--> </span> use SSLSocket rather than Socket for secure data exchange </p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p> This noncompliant code example shows the use of regular sockets for a server application that fails to protect sensitive information in transit. The insecure code for the corresponding client application follows the server's code. </p>
+ <pre><code class="language-java"> 
+class EchoServer {
+  public static void main(String[] args) throws IOException {
+    ServerSocket serverSocket = null;
+    try {
+      serverSocket = new ServerSocket(9999);
+      Socket socket = serverSocket.accept();
+      PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+      BufferedReader in = new BufferedReader(
+          new InputStreamReader(socket.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null) {
+        System.out.println(inputLine);
+        out.println(inputLine);
+      }
+    } finally {
+      if (serverSocket != null) {
+        try {
+          serverSocket.close();
+        } catch (IOException x) {
+          // Handle error
+        }
+      }
+    }
+  }
+}
+ 
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p>This compliant solution uses SSLSocket to protect packets using the SSL/TLS security protocols:</p>
+ <pre><code class="language-java"> 
+class EchoServer {
+  public static void main(String[] args) throws IOException {
+    SSLServerSocket sslServerSocket = null;
+    try {
+      SSLServerSocketFactory sslServerSocketFactory =
+          (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
+      sslServerSocket = (SSLServerSocket) sslServerSocketFactory.
+                        createServerSocket(9999);
+      SSLSocket sslSocket = (SSLSocket) sslServerSocket.accept();
+      PrintWriter out = new PrintWriter(sslSocket.getOutputStream(),true);
+      BufferedReader in = new BufferedReader(
+          new InputStreamReader(sslSocket.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null) {
+        System.out.println(inputLine);
+        out.println(inputLine);
+      }
+    } finally {
+      if (sslServerSocket != null) {
+        try {
+          sslServerSocket.close();
+        } catch (IOException x) {
+          // Handle error
+        }
+      }
+    }
+  }
+}
+ </code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/MSC00-J.+Use+SSLSocket+rather+than+Socket+for+secure+data+exchange" target="_blank">MSC00-J. Use SSLSocket rather than Socket for secure data exchange</a></li>
+          </ul> 
+          <h4>Related Guidelines</h4>
+          <ul>
+            <li><a href="http://cwe.mitre.org/data/definitions/311.html" target="_blank"> CWE-311,</a> Failure to Encrypt Sensitive Data</li>
+          </ul></td>  </tr>
+</MSC00-J>
+ 
+
+<MSC01-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>MSC01-J. Do not use an empty infinite loop</h4>
+     <p>An infinite loop with an empty body consumes CPU cycles but does nothing. Optimizing compilers and just-in-time systems (JITs) are permitted to (perhaps unexpectedly) remove such a loop. Consequently, programs must not include infinite loops with empty bodies.</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> code block <span style="color: red"><!--$001violation$001--> </span> contains an empty infinite loop  </p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p>This noncompliant code example implements an idle task that continuously executes a loop without executing any instructions within the loop. An optimizing compiler or JIT could remove the while loop in this example.</p>
+ <pre><code class="language-java"> 
+public int nop() {
+  while (true) {
+   }
+}
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p>This compliant solution avoids use of a meaningless infinite loop by invoking Thread.sleep() within the while loop. The loop body contains semantically meaningful operations and consequently cannot be optimized away.</p>
+ <pre><code class="language-java"> 
+
+public final int DURATION=10000; // In milliseconds
+ 
+public void nop() throws InterruptedException {
+  while (true) {
+    // Useful operations
+    Thread.sleep(DURATION);
+  }
+}
+ </code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/MSC01-J.+Do+not+use+an+empty+infinite+loop" target="_blank">MSC01-J. Do not use an empty infinite loop </a></li>
+          </ul> 
+          </td>  </tr>
+</MSC01-J>
+
+ 
+
+<MSC02-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>MSC02-J. Generate strong random numbers</h4>
+     <p>When software generates predictable values in a context requiring unpredictability, it may be possible for an attacker to guess the next value that will be generated, and use this guess to impersonate another user or access sensitive information.
+
+As the java.util.Random class relies on a pseudorandom number generator, this class and relating java.lang.Math.random() method should not be used for security-critical applications or for protecting sensitive data. In such context, the java.security.SecureRandom class which relies on a cryptographically strong random number generator (RNG) should be used in place.</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> code block <span style="color: red"><!--$001violation$001--> </span> trying to </p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p>This noncompliant code example uses the insecure java.util.Random class. This class produces an identical sequence of numbers for each given seed value; consequently, the sequence of numbers is predictable. </p>
+ <pre><code class="language-java"> 
+ 
+import java.util.Random;
+// ...
+ 
+Random number = new Random(123L);
+//...
+for (int i = 0; i < 20; i++) {
+  // Generate another random integer in the range [0, 20]
+  int n = number.nextInt(21);
+  System.out.println(n);
+}
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p>This compliant solution uses the java.security.SecureRandom class to produce high-quality random numbers:</p>
+ <pre><code class="language-java"> 
+ 
+import java.security.SecureRandom;
+import java.security.NoSuchAlgorithmException;
+// ...
+ 
+public static void main (String args[]) {
+  SecureRandom number = new SecureRandom();
+  // Generate 20 integers 0..20
+  for (int i = 0; i < 20; i++) {
+    System.out.println(number.nextInt(21));
+  }
+}
+ </code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="" target="_blank">MSC02-J. Generate strong random numbers</a></li>
+          </ul> 
+          <h4>Related Guidelines</h4>
+          <ul>
+            <li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6969" target="_blank">CVE-2006-6969</a> </li>
+          </ul></td>  </tr>
+</MSC02-J>
+ 
+
+<NUM09-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>NUM09-J. Do not use floating-point variables as loop counters</h4>
+     <p>Floating-point variables must not be used as loop counters. Limited-precision IEEE 754 floating-point types cannot represent</p>
+<ul>
+<li>All simple fractions exactly.</li>
+<li>All decimals precisely, even when the decimals can be represented in a small number of digits.</li>
+<li>All digits of large values, meaning that incrementing a large floating-point value might not change that value within the available precision.</li></ul>
+
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> code block <span style="color: red"><!--$001violation$001--> </span> contains a floating-point variables as loop counters. </p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p> This noncompliant code example uses a floating-point variable as a loop counter. The decimal number 0.1 cannot be precisely represented as a float or even as a double </p>
+ <pre><code class="language-java"> 
+ for (float x = 0.1f; x <= 1.0f; x += 0.1f) {
+  System.out.println(x);
+}
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p>  This compliant solution uses an integer loop counter from which the desired floating-point value is derived:</p>
+ <pre><code class="language-java"> 
+ 
+for (int count = 1; count <= 10; count += 1) {
+  float x = count/10.0f;
+  System.out.println(x);
+}
+ </code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/NUM09-J.+Do+not+use+floating-point+variables+as+loop+counters" target="_blank">NUM09-J. Do not use floating-point variables as loop counters</a></li>
+          </ul> 
+          <h4>Related Guidelines</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/c/FLP30-C.+Do+not+use+floating-point+variables+as+loop+counters" target="_blank"> FLP30-C. Do not use floating-point variables as loop counters </a> </li>
+          </ul></td>  </tr>
+</NUM09-J>
+
+ 
+
+<NUM10-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>NUM10-J. Do not construct BigDecimal objects from floating-point literals</h4>
+     <p>Literal decimal floating-point numbers cannot always be precisely represented as an IEEE 754 floating-point value. Consequently, the BigDecimal(double val) constructor must not be passed a floating-point literal as an argument when doing so results in an unacceptable loss of precision.</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> code block <span style="color: red"><!--$001violation$001--> </span> trying to construct BigDecimal objects from floating-point literals</p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p>This noncompliant code example passes a double value to the BigDecimal constructor. Because the decimal literal 0.1 cannot be precisely represented by a double, precision of the BigDecimal is affected. </p>
+ <pre><code class="language-java"> 
+ System.out.println(new BigDecimal(0.1));
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p>This compliant solution passes the decimal literal as a String so that the BigDecimal(String val) constructor is invoked and the precision is preserved:</p>
+ <pre><code class="language-java"> 
+ System.out.println(new BigDecimal("0.1"));
+ </code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/NUM10-J.+Do+not+construct+BigDecimal+objects+from+floating-point+literals" target="_blank">NUM10-J. Do not construct BigDecimal objects from floating-point literals</a></li>
+          </ul> 
+           
+           </td>  </tr>
+</NUM10-J>
+
+ 
+
+<OBJ10-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>OBJ10-J. Do not use public static nonfinal fields</h4>
+     <p>There is no good reason to declare a field "public" and "static" without also declaring it "final". Most of the time this is a kludge to share a state among several objects. But with this approach, any object can do whatever it wants with the shared state, such as setting it to null.</p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> code block <span style="color: red"><!--$001violation$001--> </span> trying to use public static nonfinal fields</p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p>This non-compliant declares a function table containing a public static field.</p>
+ <pre><code class="language-java"> 
+ public class Greeter {
+  public static Foo foo = new Foo();
+  ...
+}
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p>This compliant solution declares the FuncLoader static field final and treats it as a constant:</p>
+ <pre><code class="language-java"> 
+ public class Greeter {
+  public static final Foo FOO = new Foo();
+  ...
+}
+ </code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/OBJ10-J.+Do+not+use+public+static+nonfinal+fields" target="_blank">OBJ10-J. Do not use public static nonfinal fields</a></li>
+          </ul> 
+          <h4>Related Guidelines</h4>
+          <ul>
+            <li><a href="http://cwe.mitre.org/data/definitions/500.html" target="_blank">MITRE, CWE-500</a> - Public Static Field Not Marked Final </li>
+           <li><a href="https://www.securecoding.cert.org/confluence/x/QQBqAQ" target="_blank">CERT OBJ10-J</a> - Do not use public static nonfinal fields </li>
+          
+          </ul></td>  </tr>
+</OBJ10-J>
+
+ 
+
+<SER05-J>
+<tr>
+
+      
+        <td colspan="5">
+ <h4>SER05-J. Do not serialize instances of inner classes</h4>
+     <p>"An inner class is a nested class that is not explicitly or implicitly declared static". Serialization of inner classes (including local and anonymous classes) is error prone. </p>
+        
+        <p>In the given program line number <span style="color: red"><!--$001linenumber$001--> </span> code block <span style="color: red"><!--$001violation$001--> </span> trying to serialize instances of inner classes</p> 
+        <span style="color: #660000">  <h4>Non-compliant Solution</h4></span>
+<p>In this noncompliant code example, the fields contained within the outer class are serialized when the inner class is serialized:</p>
+ <pre><code class="language-java"> 
+ public class OuterSer implements Serializable {
+  private int rank;
+  class InnerSer implements Serializable {
+    protected String name;
+    // ...
+  }
+}
+ </code></pre>
+<span style="color:#00b33c"><h4>Compliant Solution</h4></span>
+<p>The InnerSer class of this compliant solution deliberately fails to implement the Serializable interface:</p>
+ <pre><code class="language-java"> 
+ public class OuterSer implements Serializable {
+  private int rank;
+  class InnerSer {
+    protected String name;
+    // ...
+  }
+}
+ </code></pre>
+<h4>Additional information</h4>
+          <ul>
+            <li><a href="https://www.securecoding.cert.org/confluence/display/java/SER05-J.+Do+not+serialize+instances+of+inner+classes" target="_blank">SER05-J. Do not serialize instances of inner classes</a></li>
+          </ul> 
+          <h4>Related Guidelines</h4>
+          <ul>
+            <li><a href="http://cwe.mitre.org/data/definitions/499.html" target="_blank">CWE-499,</a> Serializable Class Containing Sensitive Data</li>
+          </ul></td>  </tr>
+</SER05-J>
+
+

@@ -1,0 +1,287 @@
+**************Scanning Started**************
+2016/05/25 20:20:46
+********************************************
+
+
+**************Scanning Started**************
+2016/05/25 20:21:55
+********************************************
+
+
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/cmds/hid/src/com/android/commands/hid/Event.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 28 . 'Event' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/cmds/media/src/com/android/commands/media/Media.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 48 . 'Media' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/ConnectivityManager.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 2259 . 'CallbackHandler' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/DnsPinger.java
+MSC02-J. Generate strong random numbers. Error at line  '63 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/Proxy.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 36 . 'Proxy' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/NetworkStatsHistory.java
+MSC02-J. Generate strong random numbers. Error at line  '530 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/IpReachabilityMonitor.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 70 . 'Callback' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/VpnService.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 366 . 'Callback' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/LinkAddress.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 216
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/LinkAddress.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 242
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/Network.java
+MSC00-J. Use SSLSocket rather than Socket for secure data exchange. Error at line  '179' Programs must use the javax.net.ssl.SSLSocket class rather than the java.net.Socket class when transferring sensitive data over insecure communication channels
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/accounts/AccountManager.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 1965 . 'Response' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/accounts/AccountManager.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 2030 . 'Response' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/animation/AnimatorSet.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 1015 . 'Node' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/app/DownloadManager.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 345 . 'Request' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/app/DownloadManager.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 763 . 'Query' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/app/Service.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 300 . 'Service' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/app/trust/TrustManager.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 37 . 'TrustManager' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/app/usage/UsageEvents.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 34 . 'Event' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/app/VoiceInteractor.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 211 . 'Request' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/app/Dialog.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 92 . 'Dialog' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/app/ApplicationPackageManager.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 1231
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/app/Notification.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 906 . 'Action' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/app/Notification.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 3716 . 'Style' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/app/NotificationManager.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 527 . 'Policy' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/bluetooth/BluetoothClass.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 105 . 'Service' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/content/Context.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 74 . 'Context' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/content/Entity.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 30 . 'Entity' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/content/ContentResolver.java
+MSC02-J. Generate strong random numbers. Error at line  '286 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/content/pm/PackageManager.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 73 . 'NameNotFoundException' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/content/pm/PackageParser.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 4253 . 'Package' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/content/pm/PackageParser.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 4541 . 'Component' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/content/pm/PackageParser.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 4662 . 'Permission' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/content/pm/PackageParser.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 4913 . 'Service' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/content/pm/PackageParser.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 4954 . 'Provider' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/content/pm/LauncherApps.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 66 . 'Callback' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/content/pm/Signature.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 41 . 'Signature' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/content/res/Configuration.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 46 . 'Configuration' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/content/res/Resources.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 98 . 'Resources' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/database/Cursor.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 35 . 'Cursor' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/database/Observable.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 29 . 'Observable' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/database/sqlite/SQLiteConnection.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 1221 . 'PreparedStatement' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/location/ActivityRecognitionHardware.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 62 . 'Event' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/Camera.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 1066 . 'EventHandler' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/camera2/CameraCharacteristics.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 62 . 'Key' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/camera2/CaptureRequest.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 96 . 'Key' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/camera2/CaptureResult.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 73 . 'Key' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/camera2/impl/CameraMetadataNative.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 78 . 'Key' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/camera2/legacy/CameraDeviceUserShim.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 266 . 'CallbackHandler' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/camera2/legacy/LegacyMetadataMapper.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 689
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/camera2/utils/CloseableLock.java
+SER05-J. Do not serialize instances of inner classes. Error at line  '70' Outer class name 'CloseableLock' Inner class name 'ScopedLock' Instances name[AutoCloseable]
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/display/VirtualDisplay.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 116 . 'Callback' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiTimerRecordSources.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 218 . 'Time' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiTimerRecordSources.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 229 . 'Duration' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  169 and variable ' HDMI_DEVICE_TYPE_CEC ' initialization at line 86. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  170 and variable ' physicalAddress ' initialization at line 124. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  171 and variable ' portId ' initialization at line 125. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  173 and variable ' logicalAddress ' initialization at line 129. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  174 and variable ' logicalAddress ' initialization at line 129. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  175 and variable ' deviceType ' initialization at line 130. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  176 and variable ' vendorId ' initialization at line 131. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  177 and variable ' powerStatus ' initialization at line 132. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  178 and variable ' displayName ' initialization at line 133. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  209 and variable ' HDMI_DEVICE_TYPE_HARDWARE ' initialization at line 88. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  210 and variable ' physicalAddress ' initialization at line 124. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  211 and variable ' portId ' initialization at line 125. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  213 and variable ' portId ' initialization at line 125. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  218 and variable ' portId ' initialization at line 125. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  234 and variable ' HDMI_DEVICE_TYPE_MHL ' initialization at line 87. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  235 and variable ' physicalAddress ' initialization at line 124. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  236 and variable ' portId ' initialization at line 125. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  238 and variable ' portId ' initialization at line 125. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  245 and variable ' adopterId ' initialization at line 138. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  246 and variable ' deviceId ' initialization at line 137. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/hdmi/HdmiDeviceInfo.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 83, invoked at line  256 and variable ' HDMI_DEVICE_TYPE_INACTIVE ' initialization at line 91. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/hardware/radio/RadioTuner.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 250 . 'Callback' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/inputmethodservice/Keyboard.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 231 . 'Key' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/inputmethodservice/SoftInputWindow.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 45 . 'Callback' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/nfc/NfcActivityManager.java
+DCL02-J. Do not modify the collection's elements during an enhanced for statement. Error at line 383
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/BatteryStats.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 276 . 'Timer' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/Handler.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 80 . 'Callback' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/Process.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 51 . 'Process' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/storage/IMountService.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 36 . 'Stub' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/storage/IMountService.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 37 . 'Proxy' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/storage/IMountServiceListener.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 33 . 'Stub' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/storage/IMountServiceListener.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 127 . 'Proxy' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/storage/IMountShutdownObserver.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 32 . 'Stub' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/storage/IMountShutdownObserver.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 79 . 'Proxy' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/storage/IObbActionListener.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 33 . 'Stub' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/storage/IObbActionListener.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 84 . 'Proxy' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/StrictMode.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 355 . 'ThreadPolicy' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/Binder.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 62 . 'Binder' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/WorkSource.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 167
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/WorkSource.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 402
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/RemoteCallbackList.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 56 . 'Callback' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/os/RemoteException.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 23 . 'RemoteException' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/preference/SeekBarVolumizer.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 48 . 'Callback' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/preference/SeekBarVolumizer.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 364 . 'Observer' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/preference/SeekBarVolumizer.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 376 . 'Receiver' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/print/PrintAttributes.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 426 . 'MediaSize' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/provider/ContactsContract.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 1664 . 'Data' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/provider/ContactsContract.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 1705 . 'Entity' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/provider/ContactsContract.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 2765 . 'Data' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/provider/ContactsContract.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 2799 . 'Entity' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/provider/ContactsContract.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 4640 . 'Data' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/provider/ContactsContract.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 6776 . 'Relation' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/provider/ContactsContract.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 6892 . 'Event' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/provider/ContactsContract.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 7283 . 'Identity' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/provider/ContactsContract.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 7321 . 'Callable' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/provider/DocumentsContract.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 148 . 'Document' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/provider/MediaStore.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 839 . 'Media' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/provider/MediaStore.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 1400 . 'Media' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/provider/MediaStore.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 2058 . 'Media' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/provider/Settings.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 1464 . 'Validator' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/service/notification/Condition.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 33 . 'Condition' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/service/notification/ConditionProviderService.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 108 . 'Provider' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/service/notification/ZenModeConfig.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 1015
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/service/notification/ZenModeConfig.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 1035
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/service/voice/AlwaysOnHotwordDetector.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 282 . 'Callback' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/service/voice/VoiceInteractionSession.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 287 . 'Request' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/speech/RecognitionService.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 232 . 'Callback' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/speech/SpeechRecognizer.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 168 . 'Connection' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/speech/tts/TextToSpeech.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 1712
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/speech/tts/TextToSpeech.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 2089 . 'Connection' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/speech/tts/TextToSpeech.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 2273 . 'Action' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/text/format/DateFormat.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 61 . 'DateFormat' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/text/format/Time.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 56 . 'Time' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/text/Html.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 832 . 'Font' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/util/ArrayMap.java
+DCL00-J. Prevent class initialization cycles (Intraclass Cycle) problem. 'static' constructor initialization at line 62, invoked at line  261 and variable ' EMPTY_IMMUTABLE_INTS ' initialization at line 81. Please do 'static' constructor initialization after all 'static' variable initialization
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/util/Base64.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 542 . 'Encoder' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/util/EventLog.java
+DCL01-J. Do not reuse public identifiers from the Java Standard Library:  Error at line 56 . 'Event' is a built-in Java Class name. Please use different one 
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/util/MathUtils.java
+MSC02-J. Generate strong random numbers. Error at line  '27 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+**************Scanning Started**************
+2016/05/25 20:23:26
+********************************************
+
+
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/DnsPinger.java
+MSC02-J. Generate strong random numbers. Error at line  '63 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/NetworkStatsHistory.java
+MSC02-J. Generate strong random numbers. Error at line  '530 The java.util.Random class must not be used either for security-critical applications or for protecting sensitive data. Use a more secure random number generator, such as the java.security.SecureRandom class.
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/LinkAddress.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 216
+     file:/media/rahul/Education/Project/src/M/Sources/frameworks/base/core/java/android/net/LinkAddress.java
+EXP02-J. Do not use the Object.equals() method to compare two arrays. Error at line 242

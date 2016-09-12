@@ -1,0 +1,4 @@
+#!/bin/bash
+cd ~/rasttool/
+java -jar rast.jar $1 $2 $3
+

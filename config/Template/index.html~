@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAST source code scanning summary</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js"></script>
+<link href="css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<!-- INCLUDES -->
+<link rel="stylesheet" href="css/bootstrap-table-expandable.css">
+<script src="js/bootstrap-table-expandable.js"></script>
+<style>
+h2 {color: #7c795d; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0; text-align: center;   }
+table.repo_table {
+color:#fff;
+font-family:Helvetica,Arial,sans-serif;
+border-collapse: collapse;
+padding:0 3px;
+border-radius: 5px;
+margin: 25px auto;
+}
+
+table.repo_table td, table.repo_table th {
+height:30px;
+transition:all 1.5s;
+text-align:center;
+padding: 5px 40px;
+border: 2px solid #000;
+width: 200px;
+}
+
+table.repo_table th {
+background:#000;
+font-weight:700;
+}
+
+table.repo_table tr td {
+background:#fff;
+color:#000;
+}
+
+table.repo_table tr td:hover {
+background:#666;
+color:#FFF;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="container">
+<br>
+<br>
+<br>
+<br>
+  <h2>RAST Summary</h2>
+
+<!--  <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+<p>Demo for <a href="http://www.jankoatwarpspeed.com/post/2009/07/19/Expand-table-rows-with-jQuery-jExpand-plugin.aspx">Expand table rows with jQuery - jExpand plugin</a></p> -->
+
+<table class="repo_table">
+    <thead>
+        <tr>
+            <th>Rule Name</th>
+            <th>Total Violations</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+<!--$totalblockattachhere-->
+ </tbody>
+    </table> 
+<br>
+<hr noshade>
+<br>
+<h4 style="color:#660000;">$001finalreport1001$ </h4>
+<br>
+<hr noshade>
+<br>
+<div style="text-align:center">  
+     <button class="btn" data-toggle="collapse" data-target="#demo">View Detailed Report</button>
+</div> 
+<div id="demo" class="collapse">
+<h4>Following files have secure coding violations </h4>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+  
+       <!--$newfileblockattachhere-->
+    
+  </div> 
+</div>
+</div>   
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>
+
